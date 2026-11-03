@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
-    body { background-color: #1a1a1a; color: white; font-family: sans-serif; padding: 15px; margin: 0; }
-    .btn { width: 100%; padding: 14px; margin-bottom: 12px; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    body { 
+      background-color: #1a1a1a; 
+      color: white; 
+      font-family: sans-serif; 
+      padding: 15px; 
+      margin: 0; 
+    }
+    
+    /* Grid layout: 2 columns */
+    .button-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    /* Common button styles */
+    .btn { 
+      width: 100%; 
+      padding: 14px 10px; 
+      border: none; 
+      border-radius: 10px; 
+      font-size: 14px; 
+      font-weight: bold; 
+      color: white; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      text-align: center;
+      gap: 6px; 
+      box-sizing: border-box;
+    }
+
+    /* Color variations */
     .btn-green { background-color: #2ea44f; }
     .btn-red { background-color: #cb2431; }
     .btn-blue { background-color: #0969da; }
@@ -15,9 +48,15 @@
 </head>
 <body>
   <h3>🛒 Choose a Service</h3>
-  <button class="btn btn-green">🔹 Gemini Pro 18 Months (Stock: 50)</button>
-  <button class="btn btn-red">📺 Apple Tv 12M Redeem Url (Stock: 0)</button>
-  <button class="btn btn-green">🎵 Apple Music 5 Months (Stock: 319)</button>
+
+  <!-- Product buttons -->
+  <div class="button-grid">
+    <button class="btn btn-green">🔹 Gemini Pro 18 Months (Stock: 50)</button>
+    <button class="btn btn-red">📺 Apple Tv 12M Redeem Url (Stock: 0)</button>
+    <button class="btn btn-green">🎵 Apple Music 5 Months (Stock: 319)</button>
+  </div>
+
+  <!-- Full width back button -->
   <button class="btn btn-blue">🔙 Back</button>
 </body>
 </html>
